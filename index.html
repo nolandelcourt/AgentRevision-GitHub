@@ -5,255 +5,297 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ma fiche de révision</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#f4f6fb;color:#20263a;font-family:Arial,sans-serif;line-height:1.6}
-main{max-width:900px;margin:auto;padding:28px 16px}
-header,.panel{background:white;padding:24px;border-radius:18px;margin-bottom:20px}
-header{background:#5556d9;color:white}
-h1{margin-top:0}h2{color:#5556d9}
-.summary{white-space:pre-wrap;overflow-wrap:anywhere}
-.question-card{border:1px solid #e0e4ef;border-radius:14px;padding:18px;margin:16px 0}
-.number{font-size:.8rem;color:#666;font-weight:bold}
-.answers{display:grid;gap:9px}
-.answer,.check{padding:12px;border-radius:10px;border:1px solid #d8deea;background:white;text-align:left;font:inherit;cursor:pointer}
-.answer{display:flex;gap:12px;align-items:center}
-.answer strong{background:#eef0ff;padding:4px 9px;border-radius:7px}
-.answer.selected{border:2px solid #5556d9}
-.answer.correct{background:#e3f8eb;border-color:#228653}
-.answer.wrong{background:#ffebeb;border-color:#cc4545}
-.check{margin-top:14px;background:#5556d9;color:white;font-weight:bold}
-.check:disabled{opacity:.45;cursor:not-allowed}
-.feedback{background:#f0f2fa;padding:12px;border-radius:10px;white-space:pre-wrap}
-#score{font-weight:bold;font-size:1.2rem}
-@media(max-width:600px){main{padding:14px 10px}.panel,header{padding:17px}}
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f6fb;
+  color: #111;
+  line-height: 1.65;
+}
+
+header {
+  background: #5556d9;
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+section {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 18px #1c2a4410;
+}
+
+h2, h3, h4 { line-height: 1.35; }
+
+.chapter-title {
+  color: #c62828;
+  margin-top: 24px;
+}
+
+.part-title {
+  color: #238443;
+  margin-top: 20px;
+}
+
+.subpart-title {
+  color: #111;
+  margin-top: 16px;
+}
+
+.summary p, .summary li {
+  color: #111;
+}
+
+.summary .definition {
+  color: #c62828;
+  font-weight: 700;
+}
+
+.summary strong { color: inherit; }
+
+.answers {
+  display: grid;
+  gap: 9px;
+}
+
+.answer {
+  padding: 12px 14px;
+  border: 1px solid #d9deea;
+  border-radius: 10px;
+  background: white;
+  color: #111;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.answer:hover { background: #f1f2ff; }
+
+.answer.correct {
+  border-color: #238443;
+  background: #eaf7ee;
+}
+
+.answer.wrong {
+  border-color: #c62828;
+  background: #fff0f0;
+}
+
+.answer:disabled { cursor: default; }
+
+.feedback {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f4f6fb;
+}
+
+#score {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  section { padding: 16px; }
+}
 </style>
 </head>
 <body>
-<main>
 <header>
-<h1>Ma fiche de révision</h1>
-<p>Relis ton cours, puis teste tes connaissances.</p>
+  <h1>📚 Ma fiche de révision</h1>
+  <p>Résumé du cours et QCM interactif</p>
 </header>
-<section class="panel">
-<h2>📚 Résumé du cours</h2>
-<div class="summary"><h2>FICHE DE RÉVISION</h2><h3>Chapitre 1 — Introduction aux éléments Financiers et Comptables</h3><ul><li>Notions essentielles</li><li>Définitions</li><li>Règles et formules</li></ul><h4>I / La notion de comptabilité</h4><ul><li><strong>Définition</strong> : La comptabilité est un système qui permet de classer et d&#39;enregistrer les informations financières. Elle offre une vision codifiée et normalisée du fonctionnement de l&#39;entreprise en utilisant son propre langage, principes comptables, et des méthodes spécifiques.</li><li><strong>Objectifs</strong> :</li><li>Informer les partenaires internes et externes.</li><li>Aider les dirigeants à la prise de décision.</li><li>Constituer la mémoire de l&#39;entreprise en conservant une trace de toutes les opérations réalisées pendant au moins 10 ans.</li><li>Être un moyen de preuve en cas de conflit avec un partenaire.</li></ul><ul><li><strong>Critères de classement des entreprises</strong> : Effectif, Chiffre d&#39;affaire HT, Secteur d’activité, Bénéfices, Pertes, Statut juridique, Nationalité.</li></ul><ul><li><strong>Type d’entreprises</strong> :</li><li><strong>Entreprises commerciales</strong> : Achètent des marchandises et les revendent.</li><li><strong>Entreprises industrielles</strong> : Achètent des matières premières et fabriquent des produits finis.</li><li><strong>Entreprises de services</strong> : Vendent des prestations de services.</li></ul><ul><li><strong>Partenaires</strong> :</li><li><strong>Intérieurs</strong> : Salariés, actionnaires.</li><li><strong>Externes</strong> : Banques, collectivités locales, fournisseurs, clients, État.</li></ul><h4>II / Qui est vraiment concerné par la comptabilité ?</h4><ul><li><strong>Entreprises privées</strong> sont les principales concernées car elles effectuent des actes commerciaux.</li></ul><h3>LIMITES DE L&#39;EXTRACTION</h3><p>Le texte fourni n&#39;a pas de problèmes réels dans son format ou sa structure.</p></div>
-</section>
-<section class="panel">
-<h2>🧠 QCM de révision</h2>
-<p>Choisis une réponse et clique sur Vérifier.</p>
-<p id="score">Score : 0 / 5</p>
 
-    <section class="question-card"
-      data-correct="B"
-      data-explanation="La comptabilité sert de preuve en cas de conflit avec des partenaires externes."
-      data-evidence="Elle est un moyen de preuve en cas de conflit avec un partenaire.">
+<main>
+  <section class="summary">
+    <h2>Résumé du cours</h2>
+    <h2 class="chapter-title">FICHE DE RÉVISION</h2>
+<h3 class="chapter-title">Chapitre 1 — Introduction aux éléments Financiers et Comptables</h3>
+<ul>
+<li class="">Notions essentielles</li>
+<li class="">Définitions</li>
+<li class="">Règles et formules</li>
+</ul>
+<h4 class="part-title">I / La notion de comptabilité</h4>
+<ul>
+<li class="definition"><strong>Définition</strong> : La comptabilité est un système qui permet de classer et d'enregistrer les informations financières. Elle offre une vision codifiée et normalisée du fonctionnement de l'entreprise en utilisant son propre langage, principes comptables, et des méthodes spécifiques.</li>
+<li class=""><strong>Objectifs</strong> :</li>
+<li class="">Informer les partenaires internes et externes.</li>
+<li class="">Aider les dirigeants à la prise de décision.</li>
+<li class="">Constituer la mémoire de l'entreprise en conservant une trace de toutes les opérations réalisées pendant au moins 10 ans.</li>
+<li class="">Être un moyen de preuve en cas de conflit avec un partenaire.</li>
+</ul>
+<ul>
+<li class=""><strong>Critères de classement des entreprises</strong> : Effectif, Chiffre d'affaire HT, Secteur d’activité, Bénéfices, Pertes, Statut juridique, Nationalité.</li>
+</ul>
+<ul>
+<li class=""><strong>Type d’entreprises</strong> :</li>
+<li class=""><strong>Entreprises commerciales</strong> : Achètent des marchandises et les revendent.</li>
+<li class=""><strong>Entreprises industrielles</strong> : Achètent des matières premières et fabriquent des produits finis.</li>
+<li class=""><strong>Entreprises de services</strong> : Vendent des prestations de services.</li>
+</ul>
+<ul>
+<li class=""><strong>Partenaires</strong> :</li>
+<li class=""><strong>Intérieurs</strong> : Salariés, actionnaires.</li>
+<li class=""><strong>Externes</strong> : Banques, collectivités locales, fournisseurs, clients, État.</li>
+</ul>
+<h4 class="part-title">II / Qui est vraiment concerné par la comptabilité ?</h4>
+<ul>
+<li class=""><strong>Entreprises privées</strong> sont les principales concernées car elles effectuent des actes commerciaux.</li>
+</ul>
+<h3 class="part-title">LIMITES DE L'EXTRACTION</h3>
+<p class="">Le texte fourni n'a pas de problèmes réels dans son format ou sa structure.</p>
+  </section>
 
-      <p class="number">QUESTION 1 / 5</p>
-      <h3>La comptabilité offre un moyen de preuve en cas de conflit avec un partenaire. Cela concerne principalement lesquels de ces partenaires ?</h3>
+  <section>
+    <h2>🧠 QCM</h2>
+    <p id="score">Réponds aux questions pour obtenir ton score.</p>
+    
+    <article class="question-card" data-correct=""
+      data-explanation="La comptabilité sert de preuve en cas de conflit avec des partenaires externes.">
+      <h3>Question 1</h3>
+      <p class="question-text">La comptabilité offre un moyen de preuve en cas de conflit avec un partenaire. Cela concerne principalement lesquels de ces partenaires ?</p>
       <div class="answers">
-    <button class="answer" data-letter="A">
-      <strong>A</strong>
-      <span>Intérieurs</span>
-    </button>
-  
-    <button class="answer" data-letter="B">
-      <strong>B</strong>
-      <span>Externes</span>
-    </button>
-  
-    <button class="answer" data-letter="C">
-      <strong>C</strong>
-      <span>Salariés</span>
-    </button>
-  
-    <button class="answer" data-letter="D">
-      <strong>D</strong>
-      <span>Actionnaires</span>
-    </button>
-  </div>
+        <button class="answer" data-index="0">
+            Intérieurs
+          </button><button class="answer" data-index="1">
+            Externes
+          </button><button class="answer" data-index="2">
+            Salariés
+          </button><button class="answer" data-index="3">
+            Actionnaires
+          </button>
+      </div>
       <p class="feedback" hidden></p>
-      <button class="check" disabled>Vérifier</button>
-    </section>
-  
-    <section class="question-card"
-      data-correct="A"
-      data-explanation="Les objectifs de la comptabilité comprennent l&#39;aide à la prise de décision des dirigeants."
-      data-evidence="Aider les dirigeants à la prise de décision.">
-
-      <p class="number">QUESTION 2 / 5</p>
-      <h3>Quel est l&#39;un des objectifs de la comptabilité dans une entreprise ?</h3>
+    </article>
+    <article class="question-card" data-correct=""
+      data-explanation="Les objectifs de la comptabilité comprennent l'aide à la prise de décision des dirigeants.">
+      <h3>Question 2</h3>
+      <p class="question-text">Quel est l'un des objectifs de la comptabilité dans une entreprise ?</p>
       <div class="answers">
-    <button class="answer" data-letter="A">
-      <strong>A</strong>
-      <span>Aider les dirigeants à la prise de décision</span>
-    </button>
-  
-    <button class="answer" data-letter="B">
-      <strong>B</strong>
-      <span>Gérer le personnel</span>
-    </button>
-  
-    <button class="answer" data-letter="C">
-      <strong>C</strong>
-      <span>Superviser la production</span>
-    </button>
-  
-    <button class="answer" data-letter="D">
-      <strong>D</strong>
-      <span>Optimiser la logistique</span>
-    </button>
-  </div>
+        <button class="answer" data-index="0">
+            Aider les dirigeants à la prise de décision
+          </button><button class="answer" data-index="1">
+            Gérer le personnel
+          </button><button class="answer" data-index="2">
+            Superviser la production
+          </button><button class="answer" data-index="3">
+            Optimiser la logistique
+          </button>
+      </div>
       <p class="feedback" hidden></p>
-      <button class="check" disabled>Vérifier</button>
-    </section>
-  
-    <section class="question-card"
-      data-correct="A"
-      data-explanation="Les entreprises privées sont les principales concernées par la comptabilité."
-      data-evidence="Entreprises privées sont les principales concernées car elles effectuent des actes commerciaux.">
-
-      <p class="number">QUESTION 3 / 5</p>
-      <h3>Quelles sont les entreprises qui sont les principales concernées par la comptabilité ?</h3>
+    </article>
+    <article class="question-card" data-correct=""
+      data-explanation="Les entreprises privées sont les principales concernées par la comptabilité.">
+      <h3>Question 3</h3>
+      <p class="question-text">Quelles sont les entreprises qui sont les principales concernées par la comptabilité ?</p>
       <div class="answers">
-    <button class="answer" data-letter="A">
-      <strong>A</strong>
-      <span>Entreprises privées</span>
-    </button>
-  
-    <button class="answer" data-letter="B">
-      <strong>B</strong>
-      <span>Entreprises publiques</span>
-    </button>
-  
-    <button class="answer" data-letter="C">
-      <strong>C</strong>
-      <span>Entreprises non commerciales</span>
-    </button>
-  
-    <button class="answer" data-letter="D">
-      <strong>D</strong>
-      <span>Associations sans but lucratif</span>
-    </button>
-  </div>
+        <button class="answer" data-index="0">
+            Entreprises privées
+          </button><button class="answer" data-index="1">
+            Entreprises publiques
+          </button><button class="answer" data-index="2">
+            Entreprises non commerciales
+          </button><button class="answer" data-index="3">
+            Associations sans but lucratif
+          </button>
+      </div>
       <p class="feedback" hidden></p>
-      <button class="check" disabled>Vérifier</button>
-    </section>
-  
-    <section class="question-card"
-      data-correct="A"
-      data-explanation="L&#39;effectif est l&#39;un des critères de classement des entreprises."
-      data-evidence="Critères de classement des entreprises : Effectif, Chiffre d&#39;affaire HT, Secteur d’activité, Bénéfices, Pertes, Statut juridique, Nationalité.">
-
-      <p class="number">QUESTION 4 / 5</p>
-      <h3>Sur les critères de classement des entreprises, quel est l&#39;un des critères mentionnés ?</h3>
+    </article>
+    <article class="question-card" data-correct=""
+      data-explanation="L'effectif est l'un des critères de classement des entreprises.">
+      <h3>Question 4</h3>
+      <p class="question-text">Sur les critères de classement des entreprises, quel est l'un des critères mentionnés ?</p>
       <div class="answers">
-    <button class="answer" data-letter="A">
-      <strong>A</strong>
-      <span>Effectif</span>
-    </button>
-  
-    <button class="answer" data-letter="B">
-      <strong>B</strong>
-      <span>Période d&#39;exploitation</span>
-    </button>
-  
-    <button class="answer" data-letter="C">
-      <strong>C</strong>
-      <span>Nombre d&#39;heures de travail</span>
-    </button>
-  
-    <button class="answer" data-letter="D">
-      <strong>D</strong>
-      <span>Type de produit fabriqué</span>
-    </button>
-  </div>
+        <button class="answer" data-index="0">
+            Effectif
+          </button><button class="answer" data-index="1">
+            Période d'exploitation
+          </button><button class="answer" data-index="2">
+            Nombre d'heures de travail
+          </button><button class="answer" data-index="3">
+            Type de produit fabriqué
+          </button>
+      </div>
       <p class="feedback" hidden></p>
-      <button class="check" disabled>Vérifier</button>
-    </section>
-  
-    <section class="question-card"
-      data-correct="A"
-      data-explanation="Les partenaires internes comprennent les salariés et les actionnaires."
-      data-evidence="Partenaires : Intérieurs : Salariés, actionnaires.">
-
-      <p class="number">QUESTION 5 / 5</p>
-      <h3>Parmi les partenaires internes de l&#39;entreprise, mentionnez l&#39;un d&#39;eux.</h3>
+    </article>
+    <article class="question-card" data-correct=""
+      data-explanation="Les partenaires internes comprennent les salariés et les actionnaires.">
+      <h3>Question 5</h3>
+      <p class="question-text">Parmi les partenaires internes de l'entreprise, mentionnez l'un d'eux.</p>
       <div class="answers">
-    <button class="answer" data-letter="A">
-      <strong>A</strong>
-      <span>Salariés</span>
-    </button>
-  
-    <button class="answer" data-letter="B">
-      <strong>B</strong>
-      <span>Actionnaires</span>
-    </button>
-  
-    <button class="answer" data-letter="C">
-      <strong>C</strong>
-      <span>Fournisseurs</span>
-    </button>
-  
-    <button class="answer" data-letter="D">
-      <strong>D</strong>
-      <span>Clients</span>
-    </button>
-  </div>
+        <button class="answer" data-index="0">
+            Salariés
+          </button><button class="answer" data-index="1">
+            Actionnaires
+          </button><button class="answer" data-index="2">
+            Fournisseurs
+          </button><button class="answer" data-index="3">
+            Clients
+          </button>
+      </div>
       <p class="feedback" hidden></p>
-      <button class="check" disabled>Vérifier</button>
-    </section>
-  
-</section>
+    </article>
+  </section>
 </main>
-<script>
-let score = 0;
-let completed = 0;
 
-document.querySelectorAll(".question-card").forEach(card => {
-  let selected = null;
-  const buttons = card.querySelectorAll(".answer");
-  const check = card.querySelector(".check");
+<script>
+const cards = [...document.querySelectorAll(".question-card")];
+let answered = 0;
+let score = 0;
+
+cards.forEach(card => {
+  const buttons = [...card.querySelectorAll(".answer")];
   const feedback = card.querySelector(".feedback");
+  const correct = card.dataset.correct.trim();
 
   buttons.forEach(button => {
     button.addEventListener("click", () => {
-      if (card.dataset.done) return;
-      selected = button.dataset.letter;
-      buttons.forEach(b => b.classList.remove("selected"));
-      button.classList.add("selected");
-      check.disabled = false;
-    });
-  });
+      if (card.dataset.done === "yes") return;
 
-  check.addEventListener("click", () => {
-    if (!selected || card.dataset.done) return;
+      card.dataset.done = "yes";
+      answered++;
 
-    card.dataset.done = "true";
-    completed++;
+      const selected = button.dataset.index;
+      const selectedText = button.textContent.trim();
 
-    const correct = selected === card.dataset.correct;
-    if (correct) score++;
+      const isCorrect =
+        selected === correct ||
+        selectedText.toLowerCase() === correct.toLowerCase();
 
-    buttons.forEach(button => {
-      button.disabled = true;
-      if (button.dataset.letter === card.dataset.correct)
+      if (isCorrect) {
+        score++;
         button.classList.add("correct");
-      else if (button.dataset.letter === selected)
+      } else {
         button.classList.add("wrong");
+        buttons.forEach((b, i) => {
+          if (i.toString() === correct ||
+              b.textContent.trim().toLowerCase() === correct.toLowerCase()) {
+            b.classList.add("correct");
+          }
+        });
+      }
+
+      buttons.forEach(b => b.disabled = true);
+      feedback.hidden = false;
+      feedback.textContent =
+        (isCorrect ? "Bonne réponse ! " : "Réponse incorrecte. ") +
+        card.dataset.explanation;
+
+      document.getElementById("score").textContent =
+        "Score : " + score + " / " + answered +
+        " (" + cards.length + " questions au total)";
     });
-
-    feedback.textContent =
-      (correct ? "Bonne réponse ! " : "Pas tout à fait. ") +
-      card.dataset.explanation +
-      (card.dataset.evidence ? "\nPreuve dans le cours : " + card.dataset.evidence : "");
-    feedback.hidden = false;
-    check.disabled = true;
-    check.textContent = "Réponse vérifiée";
-
-    document.getElementById("score").textContent =
-      "Score : " + score + " / " + completed +
-      " questions corrigées sur " +
-      document.querySelectorAll(".question-card").length;
   });
 });
 </script>
