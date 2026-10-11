@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ma fiche de révision</title>
+<title>Mes fiches de révision</title>
 <style>
 * { box-sizing: border-box; }
 
@@ -28,7 +28,7 @@ main {
   padding: 0 16px 40px;
 }
 
-section {
+.course {
   background: white;
   border-radius: 16px;
   padding: 22px;
@@ -38,36 +38,28 @@ section {
 
 h2, h3, h4 { line-height: 1.35; }
 
-.chapter-title {
-  color: #c62828;
-  margin-top: 24px;
+.course-title {
+  color: #5556d9;
+  border-bottom: 2px solid #e5e7ff;
+  padding-bottom: 12px;
+  overflow-wrap: anywhere;
 }
 
-.part-title {
-  color: #238443;
-  margin-top: 20px;
-}
+.chapter-title { color: #c62828; margin-top: 24px; }
+.part-title { color: #238443; margin-top: 20px; }
+.subpart-title { color: #111; margin-top: 16px; }
 
-.subpart-title {
-  color: #111;
-  margin-top: 16px;
-}
-
-.summary p, .summary li {
-  color: #111;
-}
-
-.summary .definition {
-  color: #c62828;
-  font-weight: 700;
-}
-
+.summary p, .summary li { color: #111; }
+.summary .definition { color: #c62828; font-weight: 700; }
 .summary strong { color: inherit; }
 
-.answers {
-  display: grid;
-  gap: 9px;
+.quiz-section {
+  border-top: 1px solid #e4e8f0;
+  margin-top: 28px;
+  padding-top: 12px;
 }
+
+.answers { display: grid; gap: 9px; }
 
 .answer {
   padding: 12px 14px;
@@ -80,18 +72,9 @@ h2, h3, h4 { line-height: 1.35; }
   cursor: pointer;
 }
 
-.answer:hover { background: #f1f2ff; }
-
-.answer.correct {
-  border-color: #238443;
-  background: #eaf7ee;
-}
-
-.answer.wrong {
-  border-color: #c62828;
-  background: #fff0f0;
-}
-
+.answer:hover:not(:disabled) { background: #f1f2ff; }
+.answer.correct { border-color: #238443; background: #eaf7ee; }
+.answer.wrong { border-color: #c62828; background: #fff0f0; }
 .answer:disabled { cursor: default; }
 
 .feedback {
@@ -100,206 +83,419 @@ h2, h3, h4 { line-height: 1.35; }
   background: #f4f6fb;
 }
 
-#score {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
+.score { font-weight: 700; font-size: 1.1rem; }
 
 @media (max-width: 600px) {
-  section { padding: 16px; }
+  .course { padding: 16px; }
 }
 </style>
 </head>
 <body>
 <header>
-  <h1>📚 Ma fiche de révision</h1>
-  <p>Résumé du cours et QCM interactif</p>
+  <h1>📚 Mes fiches de révision</h1>
+  <p>Chaque matière possède son résumé et son QCM interactif.</p>
 </header>
 
 <main>
-  <section class="summary">
-    <h2>Résumé du cours</h2>
-    <h2 class="chapter-title">FICHE DE RÉVISION</h2>
+  
+    <section class="course">
+      <h2 class="course-title">Anglais</h2>
+
+      <div class="summary">
+        <h3>📘 Résumé du cours</h3>
+        <h2 class="chapter-title">FICHE DE RÉVISION</h2>
+<h3 class="chapter-title">Chapitre 1 — Lexique à traduire et à apprendre</h3>
+<h4 class="subpart-title">Notions essentielles</h4>
+<ul>
+<li class=""><strong>Lexique des emplois et des concepts :</strong></li>
+<li class="">An applicant (Un candidat)</li>
+<li class="">A job offer (Une offre de travail)</li>
+<li class="">A trainee (Un stagiaire)</li>
+<li class="">An internship (Un stage)</li>
+<li class="">A placement (Un stage)</li>
+<li class="">A job interview (Un entretien d'embauche)</li>
+<li class="">A résumé (Un CV)</li>
+<li class="">Job hunting (Une recherche d'emploi)</li>
+<li class="">Jobless (Sans emploi)</li>
+<li class="">To resign (Démissionner)</li>
+<li class="">To give advice (Donner un conseil)</li>
+<li class="">To hire (Recruter)</li>
+<li class="">To screen (Sélectionner)</li>
+<li class="">To look for a job (Chercher un emploi)</li>
+<li class="">To lay off (Licencier)</li>
+<li class="">Requirements (Exigences)</li>
+<li class="">To target (Cibler)</li>
+<li class="">Strengths and weaknesses (Points forts et points faibles)</li>
+<li class="">Sandwich course (Formation en alternance)</li>
+<li class="">To clock in/out (Pointer (arrivé, départ))</li>
+<li class="">A cover letter (Une lettre de motivation)</li>
+<li class="">To commute (Faire la navette)</li>
+<li class="">Temp work (Travail en intérim)</li>
+<li class="">A permanent job (Un travail à temps plein)</li>
+<li class="">A temporary job (Un travail à durée indéterminée)</li>
+</ul>
+<h4 class="subpart-title">Définitions</h4>
+<ul>
+<li class=""><strong>Définitions des termes professionnels :</strong></li>
+<li class=""><strong>An applicant</strong> - Une personne qui postule pour un poste.</li>
+<li class=""><strong>A job offer</strong> - Une proposition d'emploi.</li>
+<li class=""><strong>A trainee</strong> - Une personne qui effectue une période de formation pour acquérir des compétences.</li>
+<li class=""><strong>An internship</strong> - Un stage d'observation et d'apprentissage dans un domaine professionnel.</li>
+<li class=""><strong>A placement</strong> - Un stage en entreprise pour les étudiants.</li>
+<li class=""><strong>A job interview</strong> - Un entretien pour discuter du poste et des qualifications.</li>
+<li class=""><strong>A résumé</strong> - Un document qui résume les expériences, les compétences et les réalisations.</li>
+<li class=""><strong>Job hunting</strong> - La recherche d'un emploi.</li>
+<li class=""><strong>Jobless</strong> - Sans emploi, chômeur.</li>
+<li class=""><strong>To resign</strong> - Démissionner de son emploi.</li>
+<li class=""><strong>To give advice</strong> - Donner un conseil.</li>
+<li class=""><strong>To hire</strong> - Recruter des candidats.</li>
+<li class=""><strong>To screen</strong> - Sélectionner des candidats.</li>
+<li class=""><strong>To look for a job</strong> - Chercher un emploi.</li>
+<li class=""><strong>To lay off</strong> - Licencier des employés.</li>
+<li class=""><strong>Requirements</strong> - Les conditions et exigences pour un poste.</li>
+<li class=""><strong>To target</strong> - Cibler des candidats.</li>
+<li class=""><strong>Strengths and weaknesses</strong> - Les points forts et les points faibles d'un candidat.</li>
+<li class=""><strong>Sandwich course</strong> - Une formation alternant le temps en entreprise et le temps à l'université.</li>
+<li class=""><strong>To clock in/out</strong> - Marquer son arrivée et son départ.</li>
+<li class=""><strong>A cover letter</strong> - Une lettre accompagnant le CV pour expliquer l'intérêt pour le poste.</li>
+<li class=""><strong>To commute</strong> - Effectuer une navette entre le lieu de résidence et le lieu de travail.</li>
+<li class=""><strong>Temp work</strong> - Un travail temporaire.</li>
+<li class=""><strong>A permanent job</strong> - Un contrat à durée indéterminée.</li>
+<li class=""><strong>A temporary job</strong> - Un contrat à durée déterminée.</li>
+</ul>
+<h4 class="subpart-title">Règles et formules</h4>
+<ul>
+<li class=""><strong>Règles de traduction et d'utilisation des termes :</strong></li>
+<li class="">Utiliser le bon terme pour la situation : par exemple, &quot;An internship (US)/a placement (GB)&quot; pour &quot;Un stage (US)/Un placement (GB)&quot;.</li>
+<li class="">Respecter les nuances : par exemple, &quot;To give a piece of advice&quot; pour &quot;Donner un conseil&quot;.</li>
+<li class="">Utiliser les termes appropriés : par exemple, &quot;To lay off&quot; pour &quot;Licencier&quot; avec des raisons économiques.</li>
+</ul>
+<h3 class="part-title">LIMITES DE L'EXTRACTION</h3>
+<p class="">Le texte fourni ne contient pas de problèmes spécifiques concernant la mise en page ou la structure.</p>
+      </div>
+
+      <div class="quiz-section">
+        <h3>🧠 QCM — Anglais</h3>
+        <p class="score">Réponds aux questions pour obtenir ton score.</p>
+        
+      <article class="question-card"
+        data-correct="A"
+        data-explanation="Une personne qui postule pour un poste est appelée un candidat.">
+        <h3>Question 1</h3>
+        <p class="question-text">Quel terme est utilisé pour désigner une personne qui postule pour un poste ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              An applicant
+            </button><button type="button" class="answer"
+              data-index="B">
+              A job offer
+            </button><button type="button" class="answer"
+              data-index="C">
+              A trainee
+            </button><button type="button" class="answer"
+              data-index="D">
+              An internship
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="B"
+        data-explanation="Un stage d'observation et d'apprentissage dans un domaine professionnel est appelé un stage.">
+        <h3>Question 2</h3>
+        <p class="question-text">Quel est le terme correct pour décrire un stage d'observation et d'apprentissage dans un domaine professionnel ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              A trainee
+            </button><button type="button" class="answer"
+              data-index="B">
+              An internship
+            </button><button type="button" class="answer"
+              data-index="C">
+              A placement
+            </button><button type="button" class="answer"
+              data-index="D">
+              A job interview
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="B"
+        data-explanation="Une personne qui effectue une période de formation pour acquérir des compétences est appelée un stagiaire.">
+        <h3>Question 3</h3>
+        <p class="question-text">Quel terme est utilisé pour décrire une période de formation pour acquérir des compétences ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              An internship
+            </button><button type="button" class="answer"
+              data-index="B">
+              A trainee
+            </button><button type="button" class="answer"
+              data-index="C">
+              A placement
+            </button><button type="button" class="answer"
+              data-index="D">
+              A job offer
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="A"
+        data-explanation="Démissionner de son emploi s'exprime par 'To resign'.">
+        <h3>Question 4</h3>
+        <p class="question-text">Quelle est la traduction correcte pour 'Démissionner de son emploi' ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              To resign
+            </button><button type="button" class="answer"
+              data-index="B">
+              To give advice
+            </button><button type="button" class="answer"
+              data-index="C">
+              To hire
+            </button><button type="button" class="answer"
+              data-index="D">
+              To screen
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="C"
+        data-explanation="Une formation alternant le temps en entreprise et le temps à l'université s'appelle une formation sandwich.">
+        <h3>Question 5</h3>
+        <p class="question-text">Quel est le terme correct pour décrire une formation alternant le temps en entreprise et le temps à l'université ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              To clock in/out
+            </button><button type="button" class="answer"
+              data-index="B">
+              A cover letter
+            </button><button type="button" class="answer"
+              data-index="C">
+              A sandwich course
+            </button><button type="button" class="answer"
+              data-index="D">
+              A permanent job
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      </div>
+    </section>
+
+    <section class="course">
+      <h2 class="course-title">Éléments financiers et comptabilité</h2>
+
+      <div class="summary">
+        <h3>📘 Résumé du cours</h3>
+        <h2 class="chapter-title">FICHE DE RÉVISION</h2>
 <h3 class="chapter-title">Chapitre 1 — Introduction aux éléments Financiers et Comptables</h3>
 <ul>
 <li class="">Notions essentielles</li>
-<li class="">Définitions</li>
-<li class="">Règles et formules</li>
-</ul>
-<h4 class="part-title">I / La notion de comptabilité</h4>
-<ul>
-<li class="definition"><strong>Définition</strong> : La comptabilité est un système qui permet de classer et d'enregistrer les informations financières. Elle offre une vision codifiée et normalisée du fonctionnement de l'entreprise en utilisant son propre langage, principes comptables, et des méthodes spécifiques.</li>
-<li class=""><strong>Objectifs</strong> :</li>
+<li class="definition"><strong>Définition :</strong> La comptabilité est un système qui permet de classer et d'enregistrer les informations financières. Elle offre une vision codifiée et normalisée du fonctionnement de l'entreprise.</li>
+<li class=""><strong>Objectifs :</strong></li>
 <li class="">Informer les partenaires internes et externes.</li>
 <li class="">Aider les dirigeants à la prise de décision.</li>
-<li class="">Constituer la mémoire de l'entreprise en conservant une trace de toutes les opérations réalisées pendant au moins 10 ans.</li>
-<li class="">Être un moyen de preuve en cas de conflit avec un partenaire.</li>
+<li class="">Constituer la mémoire de l'entreprise.</li>
+<li class="">Être un moyen de preuve en cas de conflit.</li>
+<li class=""><strong>Critères de classement des entreprises :</strong> Effectif, Chiffre d'affaire HT, Secteur d'activité, Bénéfices, Pertes, Statut juridique, Nationalité.</li>
+<li class=""><strong>Entreprises concernées :</strong> Principalement les entreprises privées, divisées en trois catégories : entreprises commerciales, industrielles, et de services.</li>
+<li class=""><strong>Partenaires :</strong></li>
+<li class="">Internes : Salariés, actionnaires.</li>
+<li class="">Externes : Banques, collectivités locales, fournisseurs, clients, État.</li>
 </ul>
 <ul>
-<li class=""><strong>Critères de classement des entreprises</strong> : Effectif, Chiffre d'affaire HT, Secteur d’activité, Bénéfices, Pertes, Statut juridique, Nationalité.</li>
+<li class="">Définitions</li>
+<li class=""><strong>Comptabilité</strong> : Un système d'organisation de l'information financière normalisé qui permet de saisir et d'enregistrer les mouvements financiers.</li>
 </ul>
 <ul>
-<li class=""><strong>Type d’entreprises</strong> :</li>
-<li class=""><strong>Entreprises commerciales</strong> : Achètent des marchandises et les revendent.</li>
-<li class=""><strong>Entreprises industrielles</strong> : Achètent des matières premières et fabriquent des produits finis.</li>
-<li class=""><strong>Entreprises de services</strong> : Vendent des prestations de services.</li>
-</ul>
-<ul>
-<li class=""><strong>Partenaires</strong> :</li>
-<li class=""><strong>Intérieurs</strong> : Salariés, actionnaires.</li>
-<li class=""><strong>Externes</strong> : Banques, collectivités locales, fournisseurs, clients, État.</li>
-</ul>
-<h4 class="part-title">II / Qui est vraiment concerné par la comptabilité ?</h4>
-<ul>
-<li class=""><strong>Entreprises privées</strong> sont les principales concernées car elles effectuent des actes commerciaux.</li>
+<li class="">Règles et formules</li>
+<li class=""><strong>Principe de la partie double :</strong> Pour chaque opération, il y a l'emploi (l'utilisation de l'argent) et la ressource (la provenance de l'argent).</li>
+<li class=""><strong>Principe comptable :</strong> Un compte sera débité lors de l'emploi et crédité lors de la ressource.</li>
 </ul>
 <h3 class="part-title">LIMITES DE L'EXTRACTION</h3>
-<p class="">Le texte fourni n'a pas de problèmes réels dans son format ou sa structure.</p>
-  </section>
+<p class="">Le texte seul ne permet pas de confirmer la fidélité à la mise en page du PDF, donc aucune limite précise n'est repérable.</p>
+      </div>
 
-  <section>
-    <h2>🧠 QCM</h2>
-    <p id="score">Réponds aux questions pour obtenir ton score.</p>
-    
-    <article class="question-card"
-      data-correct="B"
-      data-explanation="La comptabilité sert de preuve en cas de conflit avec des partenaires externes.">
-      <h3>Question 1</h3>
-      <p class="question-text">La comptabilité offre un moyen de preuve en cas de conflit avec un partenaire. Cela concerne principalement lesquels de ces partenaires ?</p>
-      <div class="answers">
-        <button class="answer" data-index="A">
-            Intérieurs
-          </button><button class="answer" data-index="B">
-            Externes
-          </button><button class="answer" data-index="C">
-            Salariés
-          </button><button class="answer" data-index="D">
-            Actionnaires
-          </button>
+      <div class="quiz-section">
+        <h3>🧠 QCM — Éléments financiers et comptabilité</h3>
+        <p class="score">Réponds aux questions pour obtenir ton score.</p>
+        
+      <article class="question-card"
+        data-correct="B"
+        data-explanation="La comptabilité aide les dirigeants à la prise de décision en fournissant des informations précises.">
+        <h3>Question 1</h3>
+        <p class="question-text">Quel est l'objectif principal de la comptabilité concernant les dirigeants de l'entreprise ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              Informer les partenaires internes et externes sur la situation financière de l'entreprise.
+            </button><button type="button" class="answer"
+              data-index="B">
+              Aider les dirigeants à la prise de décision en fournissant des informations précises.
+            </button><button type="button" class="answer"
+              data-index="C">
+              Constituer la mémoire de l'entreprise pour les archives interne.
+            </button><button type="button" class="answer"
+              data-index="D">
+              Être un moyen de preuve en cas de litige avec des tiers.
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="C"
+        data-explanation="Le nombre de dirigeants n'est pas mentionné comme critère de classement des entreprises.">
+        <h3>Question 2</h3>
+        <p class="question-text">Quel critère de classement des entreprises n'est pas mentionné dans la fiche ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              Effectif
+            </button><button type="button" class="answer"
+              data-index="B">
+              Chiffre d'affaire HT
+            </button><button type="button" class="answer"
+              data-index="C">
+              Nombre de dirigeants
+            </button><button type="button" class="answer"
+              data-index="D">
+              Statut juridique
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="A"
+        data-explanation="Les entreprises commerciales peuvent être des SASU, SARL, SAS ou SA, mais la fiche ne mentionne pas de SCIC.">
+        <h3>Question 3</h3>
+        <p class="question-text">Quel est le statut juridique des entreprises commerciales selon la fiche ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              SASU
+            </button><button type="button" class="answer"
+              data-index="B">
+              SARL
+            </button><button type="button" class="answer"
+              data-index="C">
+              SAS
+            </button><button type="button" class="answer"
+              data-index="D">
+              SCIC
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="A"
+        data-explanation="Le compte sera débité lors de l'emploi et crédité lors de la ressource.">
+        <h3>Question 4</h3>
+        <p class="question-text">Quel est le principe comptable qui s'applique lorsqu'une opération est effectuée ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              Un compte sera débité lors de l'emploi et crédité lors de la ressource.
+            </button><button type="button" class="answer"
+              data-index="B">
+              Un compte sera débité lors de l'emploi et débité lors de la ressource.
+            </button><button type="button" class="answer"
+              data-index="C">
+              Un compte sera crédité lors de l'emploi et débité lors de la ressource.
+            </button><button type="button" class="answer"
+              data-index="D">
+              Un compte sera crédité lors de l'emploi et crédité lors de la ressource.
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
+      <article class="question-card"
+        data-correct="D"
+        data-explanation="Les informations fournies par la comptabilité peuvent bénéficier aux salariés, notamment pour la prise de décision.">
+        <h3>Question 5</h3>
+        <p class="question-text">Quels partenaires internes peuvent bénéficier des informations fournies par la comptabilité ?</p>
+        <div class="answers">
+          <button type="button" class="answer"
+              data-index="A">
+              Banques
+            </button><button type="button" class="answer"
+              data-index="B">
+              Collectivités locales
+            </button><button type="button" class="answer"
+              data-index="C">
+              Fournisseurs
+            </button><button type="button" class="answer"
+              data-index="D">
+              Salariés
+            </button>
+        </div>
+        <p class="feedback" hidden></p>
+      </article>
       </div>
-      <p class="feedback" hidden></p>
-    </article>
-    <article class="question-card"
-      data-correct="A"
-      data-explanation="Les objectifs de la comptabilité comprennent l'aide à la prise de décision des dirigeants.">
-      <h3>Question 2</h3>
-      <p class="question-text">Quel est l'un des objectifs de la comptabilité dans une entreprise ?</p>
-      <div class="answers">
-        <button class="answer" data-index="A">
-            Aider les dirigeants à la prise de décision
-          </button><button class="answer" data-index="B">
-            Gérer le personnel
-          </button><button class="answer" data-index="C">
-            Superviser la production
-          </button><button class="answer" data-index="D">
-            Optimiser la logistique
-          </button>
-      </div>
-      <p class="feedback" hidden></p>
-    </article>
-    <article class="question-card"
-      data-correct="A"
-      data-explanation="Les entreprises privées sont les principales concernées par la comptabilité.">
-      <h3>Question 3</h3>
-      <p class="question-text">Quelles sont les entreprises qui sont les principales concernées par la comptabilité ?</p>
-      <div class="answers">
-        <button class="answer" data-index="A">
-            Entreprises privées
-          </button><button class="answer" data-index="B">
-            Entreprises publiques
-          </button><button class="answer" data-index="C">
-            Entreprises non commerciales
-          </button><button class="answer" data-index="D">
-            Associations sans but lucratif
-          </button>
-      </div>
-      <p class="feedback" hidden></p>
-    </article>
-    <article class="question-card"
-      data-correct="A"
-      data-explanation="L'effectif est l'un des critères de classement des entreprises.">
-      <h3>Question 4</h3>
-      <p class="question-text">Sur les critères de classement des entreprises, quel est l'un des critères mentionnés ?</p>
-      <div class="answers">
-        <button class="answer" data-index="A">
-            Effectif
-          </button><button class="answer" data-index="B">
-            Période d'exploitation
-          </button><button class="answer" data-index="C">
-            Nombre d'heures de travail
-          </button><button class="answer" data-index="D">
-            Type de produit fabriqué
-          </button>
-      </div>
-      <p class="feedback" hidden></p>
-    </article>
-    <article class="question-card"
-      data-correct="A"
-      data-explanation="Les partenaires internes comprennent les salariés et les actionnaires.">
-      <h3>Question 5</h3>
-      <p class="question-text">Parmi les partenaires internes de l'entreprise, mentionnez l'un d'eux.</p>
-      <div class="answers">
-        <button class="answer" data-index="A">
-            Salariés
-          </button><button class="answer" data-index="B">
-            Actionnaires
-          </button><button class="answer" data-index="C">
-            Fournisseurs
-          </button><button class="answer" data-index="D">
-            Clients
-          </button>
-      </div>
-      <p class="feedback" hidden></p>
-    </article>
-  </section>
+    </section>
 </main>
 
 <script>
-const cards = [...document.querySelectorAll(".question-card")];
-let answered = 0;
-let score = 0;
+document.querySelectorAll(".course").forEach(course => {
+  const cards = [...course.querySelectorAll(".question-card")];
+  const scoreDisplay = course.querySelector(".score");
+  let answered = 0;
+  let score = 0;
 
-cards.forEach(card => {
-  const buttons = [...card.querySelectorAll(".answer")];
-  const feedback = card.querySelector(".feedback");
-  const correct = card.dataset.correct.trim();
+  cards.forEach(card => {
+    const buttons = [...card.querySelectorAll(".answer")];
+    const feedback = card.querySelector(".feedback");
+    const correct = card.dataset.correct.trim();
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      if (card.dataset.done === "yes") return;
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        if (card.dataset.done === "yes") return;
 
-      card.dataset.done = "yes";
-      answered++;
+        card.dataset.done = "yes";
+        answered++;
 
-      const selected = button.dataset.index;
-      const selectedText = button.textContent.trim();
+        const selected = button.dataset.index.trim();
+        const selectedText = button.textContent.trim();
 
-      const isCorrect =
-        selected === correct ||
-        selectedText.toLowerCase() === correct.toLowerCase();
+        const isCorrect =
+          selected.toUpperCase() === correct ||
+          selectedText.toLowerCase() === correct.toLowerCase();
 
-      if (isCorrect) {
-        score++;
-        button.classList.add("correct");
-      } else {
-        button.classList.add("wrong");
-        buttons.forEach((b, i) => {
-          if (i.toString() === correct ||
-              b.textContent.trim().toLowerCase() === correct.toLowerCase()) {
-            b.classList.add("correct");
-          }
-        });
-      }
+        if (isCorrect) {
+          score++;
+          button.classList.add("correct");
+        } else {
+          button.classList.add("wrong");
 
-      buttons.forEach(b => b.disabled = true);
-      feedback.hidden = false;
-      feedback.textContent =
-        (isCorrect ? "Bonne réponse ! " : "Réponse incorrecte. ") +
-        card.dataset.explanation;
+          buttons.forEach((b, i) => {
+            if (
+              b.dataset.index.trim().toUpperCase() === correct ||
+              b.textContent.trim().toLowerCase() === correct.toLowerCase() ||
+              String(i).toUpperCase() === correct
+            ) {
+              b.classList.add("correct");
+            }
+          });
+        }
 
-      document.getElementById("score").textContent =
-        "Score : " + score + " / " + answered +
-        " (" + cards.length + " questions au total)";
+        buttons.forEach(b => b.disabled = true);
+        feedback.hidden = false;
+        feedback.textContent =
+          (isCorrect ? "Bonne réponse ! " : "Réponse incorrecte. ") +
+          card.dataset.explanation;
+
+        scoreDisplay.textContent =
+          "Score : " + score + " / " + answered +
+          " (" + cards.length + " questions au total)";
+      });
     });
   });
 });
